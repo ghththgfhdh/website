@@ -5,7 +5,16 @@ from django.conf.urls.static import static
 from django.views.generic import RedirectView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),  
+]
+
+urlpatterns += [
     path('comic/', include('momo.urls')),
+]
+
+urlpatterns += [
     path('', RedirectView.as_view(url='comic/')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
+
+urlpatterns+= static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+

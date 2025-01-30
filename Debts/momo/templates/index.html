@@ -1,20 +1,64 @@
 {% extends "base_generic.html" %}
-
 {% block content %}
 {% block title %}
-<title> We blanchin, girl we blanchin</title>
+<head> <!-- ?? -->
+<title>Index</title>
+</head>
 {% endblock %}
-  <h1>Local Library Home</h1>
-  <p>
-    Welcome to LocalLibrary, a website developed by
-    <em>Mozilla Developer Network</em>!
-  </p>
-  <h2>Dynamic content</h2>
-  <p>The library has the following record counts:</p>
-  <ul>
-    <li><strong>Books:</strong> {{ num_books }}</li>
-    <li><strong>Copies:</strong> {{ num_instances }}</li>
-    <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
-    <li><strong>Authors:</strong> {{ num_authors }}</li>
-  </ul>
+
+<header class="masthead">
+  <div class="overlay"></div>
+  <div class="container">
+      <div class="row">
+          <div class=" col-md-8 col-md-10 mx-auto">
+              <div class="site-heading">
+                  <h3 class=" site-heading my-4 mt-3 text-white">Welcome!</h3>
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
+
+<br />
+<div class="container">
+  <div class="info" style="flex: 2; padding: 30px;">
+      <h3>Depths of Deduction</h3>
+
+      <br />
+      <p>When Diego is dragged out of the comfort of his room, he starts unveiling mysteries he never wanted answers to.</p>
+
+      <br />
+      <button onclick="#">Learn More</button>
+  </div>
+
+      <br />
+      <div> <!-- soon to be testDiv-->
+          <p>img</p>
+      </div>
+
+  </div>
+
+  <div class="container"> <!-- This might be moved under the DoD part -->
+ 
+    <p>TRUE! -- nervous -- very, very dreadfully nervous I had been and am; but why will you say that I am mad? The disease had sharpened my senses -- not destroyed -- not dulled them. Above all was the sense of hearing acute. I heard all things in the heaven and in the earth. I heard many things in hell. How, then, am I mad? Hearken! and observe how healthily -- how calmly I can tell you the whole story.</p>
+
+    <br />
+    <button onclick="#">Did you come from my ad?</button>
+    <button onclick="#">My Promise</button>
+    <button onclick="window.open('https://www.buymeacoffee.com/DepthsofDeduction', '_blank')">Support My Work!</button>
+
+<br />
+<p>img</p>
+</div>
+
+  <br />
+  <div class="container">
+      <h3>Yeah, right, who are you again?</h3>
+
+      <br />
+      <p>img</p>
+
+      <br />
+      <button onclick="#">Okay, buddy.</button>
+  </div>
 {% endblock %}
