@@ -1,0 +1,139 @@
+/* special, pretty div tags
+
+responsive stuff
+
+nav bar
+
+what do you even use a footer for in such a simple website?
+
+blog page...links? should be disconnected div tags
+
+very angular 
+
+Textures mostly on headers but sometimes on gen bg depending on context (ex. background on the synopsis page probably works well) */
+
+.divTest1 {
+    background-color:blue;
+}
+
+.divTest2 {
+    background-color:green;
+}
+
+.divTest3 {
+    background-color:red;
+}
+
+.divTest4 {
+    background-color:yellow; /*These are placeholders to ensure everything fits. Replaced with real, manly div tags/imgs/etc later */
+}
+
+.shadow {
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+}
+
+.masthead {
+    background: #513a28;
+    height: auto;
+    padding-bottom: 15px;
+    box-shadow: 0 16px 48px #E3E7EB;
+    padding-top: 10px;
+}
+
+.card {
+    background-color: #492f1d;
+}
+
+.navItUp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbarLinks ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbarLinks li {
+    list-style: none;
+}
+
+    .navbarLinks li a {
+        text-decoration: none;
+        color: black;
+        padding: 1rem;
+        display: block;
+    }
+
+    .navbarLinks li:hover {
+        background-color: #f2f2f2;
+    }
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+    .toggle-button .bar {
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+.title {
+    all: unset;
+}
+
+.title:hover {
+    all: unset;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbarLinks {
+        display: none;
+        width: 100%;
+    }
+
+    .navItUp {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbarLinks ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbarLinks li {
+        text-align: center;
+    }
+
+        .navbarLinks li a {
+            padding: .5rem 1rem;
+        }
+
+    .navbarLinks.active {
+        display: flex;
+    }
+}
+/* Works now. I think. Mostly. Can't change background colour for some reason. */
