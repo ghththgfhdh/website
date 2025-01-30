@@ -3,10 +3,12 @@ from django.shortcuts import render
 from django.shortcuts import render
 from django.views import generic
 from .models import Post
+from django.core.paginator import Paginator
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'blog.html'
+    paginate_by = 10
     
 #add tags and photos later.
 class PostDetail(generic.DetailView):
@@ -15,3 +17,6 @@ class PostDetail(generic.DetailView):
 
 def index(request):
     return render(request, 'index.html')
+
+def blog(request):
+    return render(request, 'blog.html')
