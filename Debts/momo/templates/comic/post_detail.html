@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<!-- Add dark mode for these later -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mb-4 mt-3 left  top ">
+            <div class="card-body">
+                <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
+                <button class="btn-toggle">Light Mode</button>
+                <p class=" text-muted">{{ post.tag }} | {{ post.created_on }}</p>
+                <p class="card-text ">{{ object.content | safe }}</p>
+            </div>
+        </div>
+        {% block sidebar %} {% endblock sidebar %}
+    </div>
+    <button onclick="window.location.href=''">Back</button>
+</div>
+{% endblock content %}
