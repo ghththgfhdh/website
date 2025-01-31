@@ -12,6 +12,11 @@ very angular
 
 Textures mostly on headers but sometimes on gen bg depending on context (ex. background on the synopsis page probably works well) */
 
+.footer {
+    
+    margin: 5rem 3rem;
+}
+
 .divTest1 {
     background-color:blue;
 }
@@ -28,6 +33,16 @@ Textures mostly on headers but sometimes on gen bg depending on context (ex. bac
     background-color:yellow; /*These are placeholders to ensure everything fits. Replaced with real, manly div tags/imgs/etc later */
 }
 
+.blog_card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  padding: 10% 50% 10% 10%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .shadow {
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
 }
@@ -41,7 +56,7 @@ Textures mostly on headers but sometimes on gen bg depending on context (ex. bac
 }
 
 .card {
-    background-color: #492f1d;
+    background-color: #492f1d !important;
 }
 
 .navItUp {
