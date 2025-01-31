@@ -1,0 +1,75 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h3 class=" site-heading my-4 mt-3 text-white">The Characters</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="tab">
+        <button class="tablinks" onclick="openChar(event, 'Diego')" id="defaultOpen">Diego Arete</button>
+        <button class="tablinks" onclick="openChar(event, 'Dede')">Dede Baker</button>
+        <button class="tablinks" onclick="openChar(event, 'Hudu')">Ketch Hudunne</button>
+        <button class="tablinks" onclick="openChar(event, 'Carrie')">Carrie May</button>
+        <button class="tablinks" onclick="openChar(event, 'Question')">???</button>
+        <button class="tablinks" onclick="openChar(event, 'Barry')">June Barry</button>
+        <button class="tablinks" onclick="openChar(event, 'Legg')">Armando Legg</button>
+    </div>
+
+    <div id="Diego" class="tabcontent" style="text-align: center;">
+        <h3>Diego Arete</h3>
+        <p>Diego is Diegin</p>
+        {% lorem 2 b random %}
+        <div class="divTest1" style="height:40em; width:25em"></div> <!-- character img -->
+    </div>
+    
+    <div id="Dede" class="tabcontent" style="text-align: center;">
+        <h3>Dede Baker</h3>
+        <p>Stupid loser</p>
+        {% lorem 2 b random %}
+        <div class="divTest1" style="height:40em; width:25em"></div> <!-- character img -->
+    </div>
+    
+    <div id="Hudu" class="tabcontent" style="text-align: center;">
+        <h3>Ketch Hudunne</h3>
+        <p>He's a pirate (I love AI autocomplete)</p>
+        {% lorem 2 b random %}
+        <div class="divTest1" style="height:40em; width:25em"></div> <!-- character img -->
+    </div>
+    
+    <div id="Carrie" class="tabcontent" style="text-align: center;">
+        <h3>Carrie May</h3>
+        <p>She</p>
+        {% lorem 2 b random %}
+        <div class="divTest1" style="height:40em; width:25em"></div> <!-- character img -->
+    </div>
+    
+    <div id="Question" class="tabcontent" style="text-align: center;">
+        <h3>???</h3>
+        <p>???</p>
+        {% lorem 2 b random %}
+        <div class="divTest1" style="height:40em; width:25em"></div> <!-- character img -->
+    </div>
+    
+    <div id="Barry" class="tabcontent" style="text-align: center;">
+        <h3>June Barry</h3>
+        <p>A Woman</p>
+        {% lorem 2 b random %}
+        <div class="divTest1" style="height:40em; width:25em"></div> <!-- character img -->
+    </div>
+    
+    <div id="Legg" class="tabcontent" style="text-align: center;">
+        <h3>Armando Legg</h3>
+        <p>A nuisance</p>
+        {% lorem 2 b random %}
+        <div class="divTest1" style="height:40em; width:25em"></div> <!-- character img -->
+    </div>
+</div>
+{% endblock %}

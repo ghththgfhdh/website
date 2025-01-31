@@ -28,37 +28,30 @@
       <p>When Diego is dragged out of the comfort of his room, he starts unveiling mysteries he never wanted answers to.</p>
 
       <br />
-      <button onclick="#">Learn More</button>
+      <button>
+      <a href="{% url 'story' %}">Learn More</a>
+      </button>
   </div>
 
-      <br />
-      <div> <!-- soon to be testDiv-->
-          <p>img</p>
-      </div>
+        <br />
+        <div class="divTest1" style="width: 17rem; height: 33rem;"></div> <!-- img with the tiny versions of all the side(ish) characters -->
 
-  </div>
+    <div>
+    <div class="divTest1" style="width: 30em; height: 35em;"></div> <!-- img of Dede, probably -->
 
-  <div class="container"> <!-- This might be moved under the DoD part -->
+    <h1>Title</h3>
  
     <p>TRUE! -- nervous -- very, very dreadfully nervous I had been and am; but why will you say that I am mad? The disease had sharpened my senses -- not destroyed -- not dulled them. Above all was the sense of hearing acute. I heard all things in the heaven and in the earth. I heard many things in hell. How, then, am I mad? Hearken! and observe how healthily -- how calmly I can tell you the whole story.</p>
 
     <br />
     <button onclick="#">Did you come from my ad?</button>
-    <button onclick="#">My Promise</button>
+    <button>
+        <a href="{% url 'progress' %}">My Promise</a>
+        </button>
     <button onclick="window.open('https://www.buymeacoffee.com/DepthsofDeduction', '_blank')">Support My Work!</button>
+    </div>
 
-<br />
-<p>img</p>
+    <br />
+
 </div>
-
-  <br />
-  <div class="container">
-      <h3>Yeah, right, who are you again?</h3>
-
-      <br />
-      <p>img</p>
-
-      <br />
-      <button onclick="#">Okay, buddy.</button>
-  </div>
 {% endblock %}

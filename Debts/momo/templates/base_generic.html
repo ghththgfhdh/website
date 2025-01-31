@@ -15,7 +15,7 @@
 
         <!-- Sidebar -->
         <nav class="navItUp">
-            <div class="brand-title"> <a class="title" href="/">Brand Name</a></div>
+            <div class="brand-title"> <a class="title" href="/">Depths of Deduction</a></div>
             <a href="#" class="toggle-button">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -24,16 +24,16 @@
             <div class="navbarLinks">
                 <ul>
                     <li class="nav-item text-black">
-                        <a class="nav-link text-black font-weight-bold" href="#">About</a> 
+                        <a class="nav-link text-black font-weight-bold" href="{% url 'about' %}">About</a> 
                     </li>
                     <li class="nav-item text-black">
-                        <a class="nav-link text-black font-weight-bold" href="#">The Story</a>
+                        <a class="nav-link text-black font-weight-bold" href="{% url 'story' %}">The Story</a>
                     </li>
                     <li class="nav-item text-black">
-                        <a class="nav-link text-black font-weight-bold" href="weblogs/"> Weblogs</a>
+                        <a class="nav-link text-black font-weight-bold" href="{% url 'blogs' %}">Weblogs</a>
                     </li>
                     <li class="nav-item text-black">
-                        <a class="nav-link text-black font-weight-bold" href="#">Progress</a>
+                        <a class="nav-link text-black font-weight-bold" href="{% url 'progress' %}">Progress</a>
                     </li>
                 </ul>
             </div>
@@ -44,8 +44,47 @@
         <!-- Content Goes here -->
         {% endblock content %}
         <!-- Footer -->
-        <footer class="py-3 bg-grey">
-            <p class="m-0 text-dark text-center ">cheese</p>
+        <footer class="footer">
+            <table>
+                <tr>
+                    <th><div class="divTest1" style="width: 100px; height: 100px; margin: 30px;"></div></th> <!-- Should become not part of the table. Some sort of logo. -->
+                    <th>Explore</th>
+                    <th>Want to help?</th>
+                    <th>Contact</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="{% url 'story' %}">Depths of Deduction</a></td>
+                    <td><a href="https://www.buymeacoffee.com/DepthsofDeduction" target="_blank">Buy Me a Coffee!</a></td>
+                    <td><a href="#">Email</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="{% url 'progress' %}">Comic progress</a></td>
+                    <td>Tell your friends!</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="{% url 'about' %}">About Me<a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="{% url 'privacyPolicy' %}">Privacy Policy</a></td>
+            </table>
+            <div class="divTest1" style="width: 40em; height: 3em;">
+                <h2>Newsletter:</h2> <!-- Literally does nothing right now, time to go into a seperate project in order to test this -->
+                <p>You will only get emails for every 3-month update and for when the comic releases.</p>
+                <form enctype="multipart/form-data" method="POST" action="" style="text-align: center;">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        
+                        <input type="email" class="form-control" id="userEmail" placeholder="Enter email" required>
+                        <small style="font-weight: 600;color: red;" class="error"></small>
+                        <small style="font-weight: 600;color: green;" class="success"></small>
+                    </div>
+                    <input type="submit" value="Subscribe" id="submit" class="btn">     
+                </form>
+            </div>
         </footer>
     </body>
 </html>

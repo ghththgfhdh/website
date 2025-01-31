@@ -20,3 +20,22 @@ def index(request):
 
 def blog(request):
     return render(request, 'blog.html')
+
+def about(request):
+    return render(request, 'about.html')
+
+def tmln(request):
+    return render(request, 'tmln.html')
+
+def synopsis(request):
+    return render(request, 'synopsis.html')
+
+def PrivacyPolicy(request):
+    return render(request, 'policy.html')
+
+def ty(request):
+    return render(request, 'ty.html')
+
+def characters(request):
+    return render(request, 'char.html')
+

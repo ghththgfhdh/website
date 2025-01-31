@@ -1,0 +1,42 @@
+{% extends "base_generic.html" %}
+{% block content %}
+
+<header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h3 class=" site-heading my-4 mt-3 text-white"> So... </h3>
+                    <p class="text-light">
+                        Who are you again? &nbsp
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </header>
+
+<div class="container">
+    <div>
+    <h3>Hello I have words that I am saying. These are indeed words. Quite.</h3>
+    {% lorem a b %}
+
+    <div class="divTest1" style="width: 20em; height: 20em;"></div> <!-- self portrait. Extremely serious. -->
+    <p>A realistic portrait of yours truly.</p>
+    </div>
+
+    <div>
+        <h3>But seriously.</h3>
+        {% lorem a b %}
+    </div>
+
+    <div>
+        <div class="divTest1" style="width: 25em; height: 25em;"></div> <!-- Shounen "I can do this!" type of pose -->
+
+        <p>I hope I can make something worth reading.</p>
+        <button>uhh what page should I link here</button>
+        <button onclick="window.open('https://www.buymeacoffee.com/DepthsofDeduction', '_blank')">Support My Work!</button>
+    </div>
+</div>
+{% endblock %}

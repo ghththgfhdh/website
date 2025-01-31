@@ -1,0 +1,61 @@
+{% extends "base_generic.html" %}
+{% block content %}
+
+<header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h3 class=" site-heading my-4 mt-3 text-white"> My progress </h3>
+                    <p class="text-light">
+                        My plans. &nbsp
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div>
+        <h3>Here's the deal. </h3>
+        {% lorem 2 b random %}
+    </div>
+    <div>
+        <h3>My Progress</h3> <!-- steps toward finishing comic issue/episode/whatever -->
+        <div>
+            <div class="divTest2" style="width: 10em; height: 70em;"></div> <!-- Will  eventually be under divTest1s -->
+            <table>
+                <tr>
+                    <td><div class="divTest1" style="height: 10em; width: 10em;"></div></td> <!-- pins-->
+                    <td><h3>1.</h3> <p>Plan</p></td>
+                </tr>
+                <tr>
+                    <td><div class="divTest1" style="height: 10em; width: 10em;"></div></td>
+                    <td><h3>2.</h3> <p>Story Draft</p></td>
+                </tr>
+                <tr>
+                    <td><div class="divTest1" style="height: 10em; width: 10em;"></div></td>
+                    <td><h3>3.</h3><p>Storyboard</p></td>
+                </tr>
+                <tr>
+                    <td><div class="divTest1" style="height: 10em; width: 10em;"></div></td>
+                    <td><h3>4.</h3> <p>Sketch</p></td>
+                </tr>
+                <tr>
+                    <td><div class="divTest1" style="height: 10em; width: 10em;"></div></td>
+                    <td><h3>5.</h3> <p>Ink</p></td>
+                </tr>
+                 <tr>
+                    <td><div class="divTest1" style="height: 10em; width: 10em;"></div></td>
+                    <td><h3>6.</h3> <p>Colour</p></td>
+                </tr>
+                <tr>
+                    <td><div class="divTest1" style="height: 10em; width: 10em;"></div></td>
+                    <td><h3>7.</h3> <p>Post Production</p></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

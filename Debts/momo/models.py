@@ -3,12 +3,19 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from django.db.models import UniqueConstraint
 from django.db.models.functions import Lower
+from taggit.managers import TaggableManager #help
+
 
 
 STATUS = (
     (0,"Draft"),
     (1,"Publish")
 )
+
+class Tags(models.Model):
+    # ... fields here
+
+    tags = TaggableManager()
 
 class Tag(models.Model):
     name = models.CharField(
