@@ -1,3 +1,3 @@
-newsletter things
+newsletter
 
 draw, then return
