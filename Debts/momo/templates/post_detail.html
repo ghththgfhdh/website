@@ -6,8 +6,11 @@
         <div class="col-md-8 mb-4 mt-3 left  top ">
             <div class="card-body">
                 <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
-                <button class="btn-toggle">Light Mode</button>
+                <button class="btn-toggle">Light Mode</button> <!-- wait until we find the actual site colours to decide if this is needed -->
                 <p class=" text-muted">{{ post.created_on }}</p>
+                {% for tags in post.tags.all %}
+                                    <p class="text-muted">{{tags.name}}</p>
+                                {% endfor %}
                 <p class="card-text ">{{ object.content | safe }}</p>
             </div>
         </div>

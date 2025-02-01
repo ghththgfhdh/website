@@ -4,87 +4,116 @@
   <title>Website</title>
   <link href="{% static 'css/normalize.css' %}" rel="stylesheet"> <!-- Adds Normalise. -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet"> <!-- Adds basic stylesheet. Different from Normalise. I think. -->
-  <script src="{% static 'js/script.js' %}"></script> <!-- Does not work -->
   <meta name="google" content="notranslate" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
             crossorigin="anonymous" />
 </head>
-
-{% block sidebar %}
-
-        <!-- Sidebar -->
-        <nav class="navItUp">
-            <div class="brand-title"> <a class="title" href="/">Depths of Deduction</a></div>
-            <a href="#" class="toggle-button">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </a>
-            <div class="navbarLinks">
-                <ul>
-                    <li class="nav-item text-black">
-                        <a class="nav-link text-black font-weight-bold" href="{% url 'about' %}">About</a> 
-                    </li>
-                    <li class="nav-item text-black">
-                        <a class="nav-link text-black font-weight-bold" href="{% url 'story' %}">The Story</a>
-                    </li>
-                    <li class="nav-item text-black">
-                        <a class="nav-link text-black font-weight-bold" href="{% url 'blogs' %}">Weblogs</a>
-                    </li>
-                    <li class="nav-item text-black">
-                        <a class="nav-link text-black font-weight-bold" href="{% url 'progress' %}">Progress</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        {% endblock sidebar %}
+    <!-- Sidebar -->
+    <nav class="navItUp">
+        <div class="brand-title"> <a class="title" href="/">Depths of Deduction</a></div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbarLinks">
+            <ul>
+                <li class="nav-item text-black">
+                    <a class="nav-link text-black font-weight-bold" href="{% url 'about' %}">About</a> 
+                </li>
+                <li class="nav-item text-black">
+                    <a class="nav-link text-black font-weight-bold" href="{% url 'story' %}">The Story</a>
+                </li>
+                <li class="nav-item text-black">
+                    <a class="nav-link text-black font-weight-bold" href="{% url 'blogs' %}">Weblogs</a>
+                </li>
+                <li class="nav-item text-black">
+                    <a class="nav-link text-black font-weight-bold" href="{% url 'progress' %}">Progress</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    {% block sidebar %}{% endblock sidebar %}
        
-        {% block content %}
-        <!-- Content Goes here -->
-        {% endblock content %}
-        <!-- Footer -->
-        <footer class="footer">
-            <table>
-                <tr>
-                    <th><div class="divTest1" style="width: 100px; height: 100px; margin: 30px;"></div></th> <!-- Should become not part of the table. Some sort of logo. -->
-                    <th>Explore</th>
-                    <th>Want to help?</th>
-                    <th>Contact</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><a href="{% url 'story' %}">Depths of Deduction</a></td>
-                    <td><a href="https://www.buymeacoffee.com/DepthsofDeduction" target="_blank">Buy Me a Coffee!</a></td>
-                    <td><a href="#">Email</a></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><a href="{% url 'progress' %}">Comic progress</a></td>
-                    <td>Tell your friends!</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><a href="{% url 'about' %}">About Me<a></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><a href="{% url 'privacyPolicy' %}">Privacy Policy</a></td>
-            </table>
-            <div class="divTest1" style="width: 40em; height: 3em;">
-                <h2>Newsletter:</h2> <!-- Literally does nothing right now, time to go into a seperate project in order to test this -->
-                <p>You will only get emails for every 3-month update and for when the comic releases.</p>
-                <form enctype="multipart/form-data" method="POST" action="" style="text-align: center;">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        
-                        <input type="email" class="form-control" id="userEmail" placeholder="Enter email" required>
-                        <small style="font-weight: 600;color: red;" class="error"></small>
-                        <small style="font-weight: 600;color: green;" class="success"></small>
-                    </div>
-                    <input type="submit" value="Subscribe" id="submit" class="btn">     
-                </form>
-            </div>
-        </footer>
+    {% block content %}
+    <!-- Content Goes here -->
+    {% endblock content %}
+    <!-- Footer -->
+    <footer class="footer">
+        <table>
+            <tr>
+                <th><div class="divTest1" style="width: 100px; height: 100px; margin: 30px;"></div></th> <!-- Should become not part of the table. Some sort of logo. -->
+                <th>Explore</th>
+                <th>Want to help?</th>
+                <th>Contact</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="{% url 'story' %}">Depths of Deduction</a></td>
+                <td><a href="https://www.buymeacoffee.com/DepthsofDeduction" target="_blank">Buy Me a Coffee!</a></td>
+                <td><a href="#">Email</a></td>
+             </tr>
+             <tr>
+                <td></td>
+                <td><a href="{% url 'progress' %}">Comic progress</a></td>
+                <td>Tell your friends!</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="{% url 'about' %}">About Me<a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="{% url 'privacyPolicy' %}">Privacy Policy</a></td>
+        </table>
+        <div class="divTest1" style="width: 40em; height: 3em;">
+            <h2>Newsletter:</h2> <!-- Literally does nothing right now, time to go into a seperate project in order to test this -->
+            <p>You will only get emails for every 3-month update and for when the comic releases.</p>
+            <form enctype="multipart/form-data" method="POST" action="" style="text-align: center;">
+                {% csrf_token %}
+                <div class="form-group">   
+                    <input type="email" class="form-control" id="userEmail" placeholder="Enter email" required>
+                    <small style="font-weight: 600;color: red;" class="error"></small>
+                    <small style="font-weight: 600;color: green;" class="success"></small>
+                </div>
+                <input type="submit" value="Subscribe" id="submit" class="btn">     
+            </form>
+        </div>
+    </footer>
     </body>
 </html>
+
+<script>
+    /* This is the only way to get the JS to work for some reason */
+
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbarLinks')[0]
+
+toggleButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active')
+});
+
+function openChar(evt, charName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(charName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
+</script>

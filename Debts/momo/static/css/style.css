@@ -12,6 +12,19 @@ very angular
 
 Textures mostly on headers but sometimes on gen bg depending on context (ex. background on the synopsis page probably works well) */
 
+a {
+    color: #809fff;
+  }
+
+body.lightTheme {
+    color: #222;
+    background: #fff;
+}
+
+body.lightTheme a {
+    color: #0033cc;
+  }
+
 .footer {
     
     margin: 5rem 3rem;
