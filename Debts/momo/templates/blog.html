@@ -27,7 +27,9 @@
                             <div class="blog_content">
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text text-muted h6"> {{ post.created_on}} </p> <!-- figure out how to show tags later -->
-                                <p class="card-text text-muted h6">{{ post.tag}}</p>
+                                {% for tags in post.tags.all %}
+                                    <p class="card-text text-muted h6">{{tags}}</p>
+                                {% endfor %}
                                 <p class="card-text">{{post.content|slice:":200" }}</p>
                                 <a href="{% url 'post_detail' post.slug%}" class="btn btn-primary">Read More &rarr;</a>
                             </div>
@@ -38,6 +40,13 @@
             </div>
             {% endfor %}
         </div> <!-- Eventually, you should be able to sort by tags. -->
+    </div>
+    {% for post in post_list %}
+    <div class="divTest1" style="width: 300px; height:500px;">
+        {% for tags in post.tags.all %}
+            <li>{{tags}}</li>
+        {% endfor %}
+    {% endfor %}
     </div>
 </div>
 

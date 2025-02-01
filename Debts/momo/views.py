@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from taggit.models import Tag
 from django.shortcuts import render
 from django.views import generic
 from .models import Post
